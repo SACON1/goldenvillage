@@ -51,23 +51,38 @@
             <div class="icon">
                 <a href="index.html">
       <img src="logo.png" alt="logo" width="80px" height="80px">
-    </a>
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="store.html">STORE</a></li>
-                    <li><a href="rules.html">RULES</a></li>
-                    <li><a href="whitelist.html">WHITELIST</a></li>
-                    <li><a href="https://discord.gg/gwr2N7svtb">JOIN&nbsp;DISCORD</a></li>
-                </ul>
-            </div>
-
+    </a></div>
+   <div class="menu">
+              <ul id="menu-list">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="store.html">STORE</a></li>
+                  <li><a href="rules.html">RULES</a></li>
+                  <li><a href="whitelist.html">WHITELIST</a></li>
+                  <li><a href="https://discord.gg/gwr2N7svtb">JOIN&nbsp;DISCORD</a></li>
+              </ul>
+          </div>
+            
+      
+      
+  
+      <!-- Koumpi gia to menu -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          function toggleMenu() {
+              var menu = document.getElementById("menu-list");
+              menu.classList.toggle("show"); // Εμφάνιση/εξαφάνιση με slide-in
+          }
+      
+          var hamburger = document.querySelector(".hamburger");
+          if (hamburger) {
+              hamburger.addEventListener("click", toggleMenu);
+          }
+      });
+      </script>
            
-
-        </div> 
         <div class="content">
             <h1 style= text-align:center; >Golden<span>Village</span> <br>Roleplay</h1>
             <p class="par" style= text-align:center; >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 

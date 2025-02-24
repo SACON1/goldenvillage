@@ -9,10 +9,12 @@
     height: 75px;
     margin: auto;
 }
+
 .icon{
     width: 200px;
     float: left;
     height: 70px;
+
 }
 
 .logo{
@@ -26,7 +28,7 @@
 }
 
 .menu{
-    width: 400px;
+    width: 450px;
     float: left;
     height: 70px;
     font-family: 'Chinese Rocks', sans-serif;
@@ -37,7 +39,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
 ul li{
     list-style: none;
@@ -46,6 +48,7 @@ ul li{
     font-size: 14px;
 }
 
+    
 ul li a{
     text-decoration: none;
     color: #fff;
@@ -325,3 +328,54 @@ ul li a:hover{
     100% { background-image: url('4.png'); }
 }
 
+/* Hamburger button styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) { /* For mobile devices */
+    .menu ul {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden off-screen */
+        width: 60%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu ul.show {
+        right: 0; /* Show the menu when it has class 'show' */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button */
+    }
+
+    .menu ul li {
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        color: #fbcd7e;
+        transition: 0.3s;
+    }
+
+    .menu ul li a:hover {
+        color: #fff;
+        transform: scale(1.1);
+    }
+}

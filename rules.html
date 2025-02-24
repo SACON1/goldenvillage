@@ -28,19 +28,20 @@
   align-items: center;
    font-size: 20px;
 }
-
 .main{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 280vh;
-    
+   
+   width: 100%;
+   background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.png);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   height: 260vh;
+   font-family: 'Chinese Rocks', sans-serif;
 
 
-    
+   
 }
+
 hr.shadow {
     border: none;
     height: 1px;
@@ -64,13 +65,13 @@ hr.shadow {
     <div class="main">
         <div class="navbar">
             <div class="icon">
-                <a href="index.html">
+                <a href="index.html" >
       <img src="logo.png" alt="logo" width="80px" height="80px">
     </a>
             </div>
 
             <div class="menu">
-                <ul>
+                <ul id="menu-list">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="store.html">STORE</a></li>
@@ -79,8 +80,25 @@ hr.shadow {
                     <li><a href="https://discord.gg/gwr2N7svtb">JOIN&nbsp;DISCORD</a></li>
                 </ul>
             </div>
-        </div>
-
+        
+        
+    
+        <!-- Koumpi gia to menu -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function toggleMenu() {
+                var menu = document.getElementById("menu-list");
+                menu.classList.toggle("show"); // Εμφάνιση/εξαφάνιση με slide-in
+            }
+        
+            var hamburger = document.querySelector(".hamburger");
+            if (hamburger) {
+                hamburger.addEventListener("click", toggleMenu);
+            }
+        });
+        </script>
 <div class="city">
 
    
@@ -153,5 +171,8 @@ hr.shadow {
         <br>
         &copy;2025 Golden Village Roleplay. All rights reserved. 
      </div>
+
+     
     </body>
+
     </html>

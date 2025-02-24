@@ -69,7 +69,7 @@ hr.shadow {
             </div>
 
             <div class="menu">
-                <ul>
+                <ul id="menu-list">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="store.html">STORE</a></li>
@@ -78,7 +78,26 @@ hr.shadow {
                     <li><a href="https://discord.gg/gwr2N7svtb">JOIN&nbsp;DISCORD</a></li>
                 </ul>
             </div>
-        </div>
+            
+        
+        
+    
+        <!-- Koumpi gia to menu -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function toggleMenu() {
+                var menu = document.getElementById("menu-list");
+                menu.classList.toggle("show"); // Εμφάνιση/εξαφάνιση με slide-in
+            }
+        
+            var hamburger = document.querySelector(".hamburger");
+            if (hamburger) {
+                hamburger.addEventListener("click", toggleMenu);
+            }
+        });
+        </script>
 
 <div class="city">
 
