@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Golden Village</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    .city {
+        color: #ffffff;
+        width: 80%;
+        padding: 10px;
+        margin: 50px auto; /* Center the element horizontally */
+        border-radius: 10px;
+        font-size: 20px;
+       
+        text-align: center; /* Center the text inside the element */
+        background: url(images/bck.png) center center / cover no-repeat;
+    }
+
+    .footer {
+    background-color: black;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+  justify-content: center;  /* Κεντράρει οριζόντια */
+  align-items: center;
+   font-size: 20px;
+}
+.main{
+   
+   width: 100%;
+   background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(images/1.png);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   height: 260vh;
+   font-family: 'Chinese Rocks', sans-serif;
+
+
+   
+}
+@media (max-width: 768px) {
+    .main {
+        height: 600vh;
+    }
+}
+
+hr.shadow {
+    border: none;
+    height: 1px;
+    background: #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  hr {
+            width: 60%;
+            height: 3px;
+            border: none;
+            background-color: white;
+            margin: 20px auto; /* Centers it */
+        }
+</style>
+
+
+
+</head>
+<body>
+    <div id="loader">
+        <img src="images/logo.png" alt="Loading..." class="loading-img">
+        <p>Loading...</p>
+    </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <a href="index.html" >
+      <img src="images/logo.png" alt="logo" class="logo">
+    </a>
+            </div>
+
+            <div class="menu">
+                <ul id="menu-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="rules.html">RULES</a></li>
+                    <li><a href="whitelist.html">WHITELIST</a></li>
+                    <li><a href="https://discord.gg/gwr2N7svtb">JOIN&nbsp;DISCORD</a></li>
+                </ul>
+            </div>
+        
+        
+    
+         <!-- Koumpi gia to menu -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function toggleMenu() {
+      var menu = document.getElementById("menu-list");
+      menu.classList.toggle("show"); // Εμφάνιση/εξαφάνιση με slide-in
+    }
+
+    var hamburger = document.querySelector(".hamburger");
+    if (hamburger) {
+      hamburger.addEventListener("click", toggleMenu);
+    }
+
+    // Κρύψε το μενού όταν κάνεις κλικ έξω από αυτό
+    document.addEventListener("click", function (event) {
+      var menu = document.getElementById("menu-list");
+      var isClickInside = menu.contains(event.target) || hamburger.contains(event.target);
+
+      if (!isClickInside) {
+          menu.classList.remove("show");
+      }
+    });
+
+    // Κρύψε το μενού όταν κάνεις scroll
+    window.addEventListener("scroll", function () {
+      var menu = document.getElementById("menu-list");
+      menu.classList.remove("show");
+    });
+  });
+</script>
+<div class="city">
+
+   <br>
+    <div class="title1">
+        <h1>RULES
+        </h1>
+        <hr class = shadow>
+      </div>
+      <br>
+    <h2>1. Γενικοί Κανόνες Συμπεριφοράς</h2>
+    <p>Να είστε ευγενικοί και να σέβεστε τα άλλα μέλη της κοινότητας.</p>
+    <p><strong>Ακατάλληλη γλώσσα & περιεχόμενο:</strong> Απαγορεύονται προσβολές, προσωπικές επιθέσεις, ρατσιστικά,<br> σεξιστικά, ομοφοβικά σχόλια και trolling.</p>
+    <p><strong>Προσωπικά δεδομένα:</strong> Απαγορεύεται η δημοσίευση προσωπικών στοιχείων άλλων μελών.</p>
+<br>
+    <h2 >2. Value of Life (VoL)</h2>
+    <p>Εκτιμήστε τη ζωή του χαρακτήρα σας σαν να ήταν η πραγματική.</p>
+    <p>Ενεργείτε με συνέπεια και ρεαλισμό σε καταστάσεις κινδύνου.</p>
+<br>
+    <h2>3. Meta Gaming</h2>
+    <p>Απαγορεύεται η χρήση πληροφοριών εκτός παιχνιδιού (Discord, Livestreams, κλπ.).</p>
+    <p>Δεν επιτρέπεται η εκμετάλλευση ξεχασμένων πληροφοριών προς όφελός σας.</p>
+<br>
+    <h2>4. Random Death Match (RDM)</h2>
+    <p>Απαγορεύεται η επίθεση σε άλλον παίκτη χωρίς κάποιο σενάριο ή roleplay.</p>
+    <p>Αν επιτεθείτε χωρίς λόγο και τραυματιστεί κάποιος, θεωρείται RDM.</p>
+<br>
+    <h2>5. Horse/Wagon Death Match (VDM)</h2>
+    <p>Απαγορεύεται να χτυπήσετε ή να σκοτώσετε κάποιον με το άλογο ή την άμαξά σας εσκεμμένα.</p>
+    <p>Αν συμβεί ατύχημα, πρέπει να σταματήσετε και να παίξετε το ανάλογο roleplay.</p>
+<br>
+    <h2>6. Fear Roleplay (FRP)</h2>
+    <p>Οι παίκτες πρέπει να αντιδρούν ρεαλιστικά σε καταστάσεις κινδύνου.</p>
+    <p>Δεν επιτρέπεται να επιτίθεστε σε υπεράριθμους αντιπάλους ή να αγνοείτε τον κίνδυνο.</p>
+<br>
+<br>
+ 
+<div class="title1">
+    <h1>GUILDNESS
+    </h1>
+    <hr class = shadow>
+  </div>
+    <br>
+    <h2>Κάντε Roleplay με Φαντασία</h2>
+    <p>
+        • Συμβάλλετε στην ανάπτυξη της ιστορίας με δημιουργικές ιδέες και σενάρια που κάνουν το παιχνίδι πιο ενδιαφέρον.<br>
+        • Επικοινωνήστε με άλλους παίκτες για να δημιουργήσετε κοινές ιστορίες και να αναπτύξετε τις σχέσεις των χαρακτήρων σας.<br>
+        • Το Roleplay είναι η καρδιά του σέρβερ μας. Μπείτε στον ρόλο σας και ζήστε τις περιπέτειες του χαρακτήρα σας με δημιουργικότητα.
+    </p>
+<br>
+    <h2>Χρήση Αλόγων και Άμαξας</h2>
+    <p>
+        • Το άλογό σας είναι σύντροφός σας στην περιπέτεια. Μην το κακομεταχειρίζεστε και αποφύγετε την υπερβολική ταχύτητα, τα άλματα από μεγάλα ύψη και την υπερκόπωση.<br>
+        • Φροντίστε το άλογό σας, ταΐζοντάς το και διατηρώντας το υγιές. Αν τραυματιστεί, μπορείτε να το θεραπεύσετε στον στάβλο.<br>
+        • Οι άμαξες πρέπει να χρησιμοποιούνται ρεαλιστικά. Αποφύγετε την υπερβολική ταχύτητα σε δύσβατες περιοχές ή σε ακατάλληλες συνθήκες.<br>
+        • Όταν οδηγείτε κοντά σε άλλους παίκτες, μειώστε την ταχύτητα και προσέχετε να μην τους χτυπήσετε.<br>
+        • Σε περίπτωση σύγκρουσης, σταματήστε και προσφέρετε βοήθεια.
+    </p>
+<br>
+    <h2>Χρήση Κατάλληλων Όπλων και Μεθόδων Κυνηγιού</h2>
+    <p>
+        • Χρησιμοποιήστε το κατάλληλο όπλο για το κάθε ζώο: <br> Για μικρά ζώα, χρησιμοποιήστε μικρότερα όπλα ή τόξα για να διατηρήσετε την ποιότητα <br> του δέρματος και του κρέατος. Για μεγαλύτερα ζώα, όπως ελάφια ή βίσωνες, χρησιμοποιήστε <br> πιο ισχυρά όπλα, όπως καραμπίνες ή τουφέκια.
+    </p>
+
+<br>
+<br>
+<hr class = shadow>
+ 
+<br>
+<br>
+<br><br><br><br><br><br>
+
+</div>
+ </div>
+    <div class="footer">
+        <br>
+        <br>
+        <br>
+        &copy;2025 Golden Village Roleplay. All rights reserved. 
+     </div>
+
+     <script src="script.js"></script>
+    </body>
+
+    </html>
